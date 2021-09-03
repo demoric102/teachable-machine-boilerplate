@@ -1,3 +1,4 @@
+
 // Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,17 +37,19 @@ class Main {
     this.bindPage();
 
     // Create video element that will contain the webcam image
+
+    let sidebar = document.getElementById('sidebar')
     this.video = document.createElement('video');
     this.video.setAttribute('autoplay', '');
     this.video.setAttribute('playsinline', '');
 
     // Add video element to DOM
-    document.body.appendChild(this.video);
+    sidebar.appendChild(this.video);
 
     // Create training buttons and info texts    
     for (let i = 0; i < NUM_CLASSES; i++) {
       const div = document.createElement('div');
-      document.body.appendChild(div);
+      sidebar.appendChild(div);
       div.style.marginBottom = '10px';
 
       // Create training button
